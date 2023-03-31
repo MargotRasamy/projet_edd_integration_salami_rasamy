@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{D7467D56-1C2C-46C8-A396-49111763CEBC}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{B615D4E3-8F38-49ED-8A0C-0C29C9F4E6AE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4857,30 +4857,30 @@ where [refTable].[nom_carburant] = ?</property>
               name="Sortie de colonne dérivée"
               startId="Package\Tâche d'injection des données de dimensions\Uppercase.Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance]"
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance]"
               endId="Package\Tâche d'injection des données de dimensions\Destination DimStationService.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimStationService.Outputs[Sortie de recherche avec correspondance]" />
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimStationService.Outputs[Sortie de recherche sans correspondance]" />
             <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance1]"
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance1]"
               endId="Package\Tâche d'injection des données de dimensions\Destination DimPresence.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimPresence.Outputs[Sortie de recherche avec correspondance]" />
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimPresence.Outputs[Sortie de recherche sans correspondance]" />
             <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance2]"
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance2]"
               endId="Package\Tâche d'injection des données de dimensions\Destination DimTypeCarburant.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimTypeCarburant.Outputs[Sortie de recherche avec correspondance]" />
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimTypeCarburant.Outputs[Sortie de recherche sans correspondance]" />
             <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance3]"
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance3]"
               endId="Package\Tâche d'injection des données de dimensions\Destination DimAutomate24.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimAutomate24.Outputs[Sortie de recherche avec correspondance]" />
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimAutomate24.Outputs[Sortie de recherche sans correspondance]" />
             <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance4]"
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance4]"
               endId="Package\Tâche d'injection des données de dimensions\Destination DimAdresse.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimAdresse.Outputs[Sortie de recherche avec correspondance]" />
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimAdresse.Outputs[Sortie de recherche sans correspondance]" />
             <path
               refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de source OLE DB]"
               endId="Package\Tâche d'injection des données de dimensions\Trier.Inputs[Entrée de tri]"
@@ -4965,7 +4965,7 @@ where [refTable].[nom_carburant] = ?</property>
                       refId="Package\Tâche de construction de la table de faits\Conversion de données.Inputs[Entrée de conversion de données].Columns[prix_valeur]"
                       cachedDataType="r8"
                       cachedName="prix_valeur"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[prix_valeur]" />
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[prix_valeur]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4992,7 +4992,7 @@ where [refTable].[nom_carburant] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[prix_valeur]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[prix_valeur]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
@@ -5027,11 +5027,11 @@ where [refTable].[nom_carburant] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Tâche de construction de la table de faits\Destination OLE DB"
+              refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
               description="Destination OLE DB"
-              name="Destination OLE DB"
+              name="Destination FaitCarburant"
               usesDispositions="true"
               version="4">
               <properties>
@@ -5084,7 +5084,7 @@ where [refTable].[nom_carburant] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-Q6MP172.projet_edd_db_salami_rasamy]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-Q6MP172.projet_edd_db_salami_rasamy]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
@@ -5092,79 +5092,79 @@ where [refTable].[nom_carburant] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB]"
                   errorOrTruncationOperation="Insérer"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrée de destination OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[id_dim_adresse]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].Columns[id_dim_adresse]"
                       cachedDataType="i4"
                       cachedName="id_dim_adresse"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_adresse]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_adresse]" />
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_adresse]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_adresse]" />
                     <inputColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[id_dim_automate_24]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].Columns[id_dim_automate_24]"
                       cachedDataType="i4"
                       cachedName="id_dim_automate_24"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_automate_24]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_automate_24]" />
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_automate_24]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_automate_24]" />
                     <inputColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[id_dim_presence]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].Columns[id_dim_presence]"
                       cachedDataType="i4"
                       cachedName="id_dim_presence"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_presence]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_presence]" />
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_presence]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_presence]" />
                     <inputColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[id_dim_type_carburant]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].Columns[id_dim_type_carburant]"
                       cachedDataType="i4"
                       cachedName="id_dim_type_carburant"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_type_carburant]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]" />
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_type_carburant]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]" />
                     <inputColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[id_dim_station_service]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].Columns[id_dim_station_service]"
                       cachedDataType="i4"
                       cachedName="id_dim_station_service"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_station_service]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]" />
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_station_service]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]" />
                     <inputColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[prix_valeur]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].Columns[prix_valeur]"
                       cachedDataType="numeric"
                       cachedName="prix_valeur"
                       cachedPrecision="5"
                       cachedScale="4"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[prix_valeur]"
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[prix_valeur]"
                       lineageId="Package\Tâche de construction de la table de faits\Conversion de données.Outputs[Sortie de conversion de données].Columns[prix_valeur]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_fait_carburant]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_fait_carburant]"
                       dataType="i4"
                       name="id_fait_carburant" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_type_carburant]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_type_carburant]"
                       dataType="i4"
                       name="id_dim_type_carburant" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_station_service]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_station_service]"
                       dataType="i4"
                       name="id_dim_station_service" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_presence]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_presence]"
                       dataType="i4"
                       name="id_dim_presence" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_adresse]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_adresse]"
                       dataType="i4"
                       name="id_dim_adresse" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_automate_24]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_automate_24]"
                       dataType="i4"
                       name="id_dim_automate_24" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[prix_valeur]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB].ExternalColumns[prix_valeur]"
                       dataType="numeric"
                       name="prix_valeur"
                       precision="5"
@@ -5174,22 +5174,22 @@ where [refTable].[nom_carburant] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Outputs[Sortie d'erreur de destination OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de destination OLE DB"
-                  synchronousInputId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  synchronousInputId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tâche de construction de la table de faits\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tâche de construction de la table de faits\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5218,7 +5218,7 @@ where [refTable].[nom_carburant] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[FaitCarburant]) [refTable]
-where [refTable].[id_dim_adresse] = ? and [refTable].[id_dim_automate_24] = ? and [refTable].[id_dim_presence] = ? and [refTable].[id_dim_type_carburant] = ? and [refTable].[id_dim_station_service] = ? and [refTable].[prix_valeur] = ?</property>
+where [refTable].[id_dim_type_carburant] = ? and [refTable].[id_dim_station_service] = ? and [refTable].[id_dim_adresse] = ? and [refTable].[id_dim_automate_24] = ? and [refTable].[id_dim_presence] = ? and [refTable].[prix_valeur] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
@@ -5254,7 +5254,7 @@ where [refTable].[id_dim_adresse] = ? and [refTable].[id_dim_automate_24] = ? an
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\Tâche de construction de la table de faits\475:invalid};#{Package\Tâche de construction de la table de faits\476:invalid};#{Package\Tâche de construction de la table de faits\477:invalid};#{Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]};#{Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]};#{Package\Tâche de construction de la table de faits\Conversion de données.Outputs[Sortie de conversion de données].Columns[prix_valeur]};</property>
+                  name="ParameterMap">#{Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]};#{Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]};#{Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_adresse]};#{Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_automate_24]};#{Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_presence]};#{Package\Tâche de construction de la table de faits\Conversion de données.Outputs[Sortie de conversion de données].Columns[prix_valeur]};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -5278,44 +5278,10 @@ where [refTable].[id_dim_adresse] = ? and [refTable].[id_dim_automate_24] = ? an
                   name="Entrée de recherche">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tâche de construction de la table de faits\Recherche.Inputs[Entrée de recherche].Columns[prix_valeur]"
-                      cachedDataType="numeric"
-                      cachedName="prix_valeur"
-                      cachedPrecision="5"
-                      cachedScale="4"
-                      lineageId="Package\Tâche de construction de la table de faits\Conversion de données.Outputs[Sortie de conversion de données].Columns[prix_valeur]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
-                          name="JoinToReferenceColumn">prix_valeur</property>
-                        <property
-                          dataType="System.Null"
-                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tâche de construction de la table de faits\Recherche.Inputs[Entrée de recherche].Columns[id_dim_station_service]"
-                      cachedDataType="i4"
-                      cachedName="id_dim_station_service"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
-                          name="JoinToReferenceColumn">id_dim_station_service</property>
-                        <property
-                          dataType="System.Null"
-                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Tâche de construction de la table de faits\Recherche.Inputs[Entrée de recherche].Columns[id_dim_type_carburant]"
                       cachedDataType="i4"
                       cachedName="id_dim_type_carburant"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]">
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -5328,10 +5294,42 @@ where [refTable].[id_dim_adresse] = ? and [refTable].[id_dim_automate_24] = ? an
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Tâche de construction de la table de faits\Recherche.Inputs[Entrée de recherche].Columns[id_dim_station_service]"
+                      cachedDataType="i4"
+                      cachedName="id_dim_station_service"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
+                          name="JoinToReferenceColumn">id_dim_station_service</property>
+                        <property
+                          dataType="System.Null"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de construction de la table de faits\Recherche.Inputs[Entrée de recherche].Columns[id_dim_adresse]"
+                      cachedDataType="i4"
+                      cachedName="id_dim_adresse"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_adresse]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
+                          name="JoinToReferenceColumn">id_dim_adresse</property>
+                        <property
+                          dataType="System.Null"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Tâche de construction de la table de faits\Recherche.Inputs[Entrée de recherche].Columns[id_dim_presence]"
                       cachedDataType="i4"
                       cachedName="id_dim_presence"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_presence]">
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_presence]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -5347,7 +5345,7 @@ where [refTable].[id_dim_adresse] = ? and [refTable].[id_dim_automate_24] = ? an
                       refId="Package\Tâche de construction de la table de faits\Recherche.Inputs[Entrée de recherche].Columns[id_dim_automate_24]"
                       cachedDataType="i4"
                       cachedName="id_dim_automate_24"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_automate_24]">
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_automate_24]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -5360,15 +5358,17 @@ where [refTable].[id_dim_adresse] = ? and [refTable].[id_dim_automate_24] = ? an
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Tâche de construction de la table de faits\Recherche.Inputs[Entrée de recherche].Columns[id_dim_adresse]"
-                      cachedDataType="i4"
-                      cachedName="id_dim_adresse"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_adresse]">
+                      refId="Package\Tâche de construction de la table de faits\Recherche.Inputs[Entrée de recherche].Columns[prix_valeur]"
+                      cachedDataType="numeric"
+                      cachedName="prix_valeur"
+                      cachedPrecision="5"
+                      cachedScale="4"
+                      lineageId="Package\Tâche de construction de la table de faits\Conversion de données.Outputs[Sortie de conversion de données].Columns[prix_valeur]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
-                          name="JoinToReferenceColumn">id_dim_adresse</property>
+                          name="JoinToReferenceColumn">prix_valeur</property>
                         <property
                           dataType="System.Null"
                           description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
@@ -5421,11 +5421,11 @@ where [refTable].[id_dim_adresse] = ? and [refTable].[id_dim_automate_24] = ? an
               </outputs>
             </component>
             <component
-              refId="Package\Tâche de construction de la table de faits\Source OLE DB"
+              refId="Package\Tâche de construction de la table de faits\Source UnqueDB"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
               description="Source OLE DB"
-              name="Source OLE DB"
+              name="Source UnqueDB"
               usesDispositions="true"
               version="7">
               <properties>
@@ -5476,7 +5476,7 @@ FROM     DestinationNormalizedUniqueDB INNER JOIN
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tâche de construction de la table de faits\Source OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-Q6MP172.projet_edd_db_salami_rasamy]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-Q6MP172.projet_edd_db_salami_rasamy]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
@@ -5484,138 +5484,138 @@ FROM     DestinationNormalizedUniqueDB INNER JOIN
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB]"
                   name="Sortie de source OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[prix_valeur]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[prix_valeur]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[prix_valeur]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[prix_valeur]"
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[prix_valeur]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[prix_valeur]"
                       name="prix_valeur"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_type_carburant]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]"
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_type_carburant]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_type_carburant]"
                       name="id_dim_type_carburant"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_station_service]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]"
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_station_service]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_station_service]"
                       name="id_dim_station_service"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_adresse]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_adresse]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_adresse]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_adresse]"
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_adresse]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_adresse]"
                       name="id_dim_adresse"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_automate_24]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_automate_24]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_automate_24]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_automate_24]"
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_automate_24]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_automate_24]"
                       name="id_dim_automate_24"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_presence]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_presence]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_presence]"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[id_dim_presence]"
+                      externalMetadataColumnId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_presence]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].Columns[id_dim_presence]"
                       name="id_dim_presence"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_station_service]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_station_service]"
                       dataType="i4"
                       name="id_dim_station_service" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[prix_valeur]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[prix_valeur]"
                       dataType="r8"
                       name="prix_valeur" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_type_carburant]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_type_carburant]"
                       dataType="i4"
                       name="id_dim_type_carburant" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_adresse]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_adresse]"
                       dataType="i4"
                       name="id_dim_adresse" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_automate_24]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_automate_24]"
                       dataType="i4"
                       name="id_dim_automate_24" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_presence]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_presence]"
                       dataType="i4"
                       name="id_dim_presence" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB]"
                   isErrorOut="true"
                   name="Sortie d'erreur de source OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_adresse]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_adresse]"
                       dataType="i4"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_adresse]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_adresse]"
                       name="id_dim_adresse" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_automate_24]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_automate_24]"
                       dataType="i4"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_automate_24]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_automate_24]"
                       name="id_dim_automate_24" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_presence]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_presence]"
                       dataType="i4"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_presence]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_presence]"
                       name="id_dim_presence" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_type_carburant]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_type_carburant]"
                       dataType="i4"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_type_carburant]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_type_carburant]"
                       name="id_dim_type_carburant" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[prix_valeur]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[prix_valeur]"
                       dataType="r8"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[prix_valeur]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[prix_valeur]"
                       name="prix_valeur" />
                     <outputColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_station_service]"
+                      refId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_station_service]"
                       dataType="i4"
-                      lineageId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_station_service]"
+                      lineageId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie d'erreur de source OLE DB].Columns[id_dim_station_service]"
                       name="id_dim_station_service" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -5631,14 +5631,14 @@ FROM     DestinationNormalizedUniqueDB INNER JOIN
               startId="Package\Tâche de construction de la table de faits\Conversion de données.Outputs[Sortie de conversion de données]" />
             <path
               refId="Package\Tâche de construction de la table de faits.Paths[Sortie de recherche sans correspondance]"
-              endId="Package\Tâche de construction de la table de faits\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              endId="Package\Tâche de construction de la table de faits\Destination FaitCarburant.Inputs[Entrée de destination OLE DB]"
               name="Sortie de recherche sans correspondance"
               startId="Package\Tâche de construction de la table de faits\Recherche.Outputs[Sortie de recherche sans correspondance]" />
             <path
               refId="Package\Tâche de construction de la table de faits.Paths[Sortie de source OLE DB]"
               endId="Package\Tâche de construction de la table de faits\Conversion de données.Inputs[Entrée de conversion de données]"
               name="Sortie de source OLE DB"
-              startId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB]" />
+              startId="Package\Tâche de construction de la table de faits\Source UnqueDB.Outputs[Sortie de source OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -8740,30 +8740,30 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           </components>
           <paths>
             <path
-              refId="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance]"
+              refId="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance]"
               endId="Package\Tâche de Test fait\Recherche DimCarburant.Inputs[Entrée de recherche]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche de Test fait\Recherche DimStationService.Outputs[Sortie de recherche avec correspondance]" />
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche de Test fait\Recherche DimStationService.Outputs[Sortie de recherche sans correspondance]" />
             <path
-              refId="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance1]"
-              endId="Package\Tâche de Test fait\Recherche DimAdresse.Inputs[Entrée de recherche]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche de Test fait\Recherche DimCarburant.Outputs[Sortie de recherche avec correspondance]" />
-            <path
-              refId="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance2]"
-              endId="Package\Tâche de Test fait\Recherche DimAutomate24.Inputs[Entrée de recherche]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche de Test fait\Recherche DimAdresse.Outputs[Sortie de recherche avec correspondance]" />
-            <path
-              refId="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance3]"
-              endId="Package\Tâche de Test fait\Recherche DimPresence.Inputs[Entrée de recherche]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche de Test fait\Recherche DimAutomate24.Outputs[Sortie de recherche avec correspondance]" />
-            <path
-              refId="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance4]"
+              refId="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance1]"
               endId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Tâche de Test fait\Recherche DimPresence.Outputs[Sortie de recherche avec correspondance]" />
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche de Test fait\Recherche DimPresence.Outputs[Sortie de recherche sans correspondance]" />
+            <path
+              refId="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance2]"
+              endId="Package\Tâche de Test fait\Recherche DimAdresse.Inputs[Entrée de recherche]"
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche de Test fait\Recherche DimCarburant.Outputs[Sortie de recherche sans correspondance]" />
+            <path
+              refId="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance3]"
+              endId="Package\Tâche de Test fait\Recherche DimAutomate24.Inputs[Entrée de recherche]"
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche de Test fait\Recherche DimAdresse.Outputs[Sortie de recherche sans correspondance]" />
+            <path
+              refId="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance4]"
+              endId="Package\Tâche de Test fait\Recherche DimPresence.Inputs[Entrée de recherche]"
+              name="Sortie de recherche sans correspondance"
+              startId="Package\Tâche de Test fait\Recherche DimAutomate24.Outputs[Sortie de recherche sans correspondance]" />
             <path
               refId="Package\Tâche de Test fait.Paths[Sortie de source OLE DB]"
               endId="Package\Tâche de Test fait\Recherche DimStationService.Inputs[Entrée de recherche]"
@@ -8847,13 +8847,13 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Tâche de construction de la table de faits\Destination OLE DB"
+          Size="198.4,41.6"
+          Id="Package\Tâche de construction de la table de faits\Destination FaitCarburant"
           TopLeft="350,399" />
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Tâche de construction de la table de faits\Source OLE DB"
-          TopLeft="359,123" />
+          Size="157.6,41.6"
+          Id="Package\Tâche de construction de la table de faits\Source UnqueDB"
+          TopLeft="358,123" />
         <NodeLayout
           Size="188,41.6"
           Id="Package\Tâche de construction de la table de faits\Conversion de données"
@@ -8864,7 +8864,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           TopLeft="363,286" />
         <EdgeLayout
           Id="Package\Tâche de construction de la table de faits.Paths[Sortie de source OLE DB]"
-          TopLeft="433.9,164.6">
+          TopLeft="435.4,164.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8882,42 +8882,6 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche de construction de la table de faits.Paths[Sortie de recherche sans correspondance]"
-          TopLeft="426.6,327.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8.60000000000008,71.4"
-              Start="0,0"
-              End="8.60000000000008,63.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.7"
-                    Point2="0,35.7"
-                    Point3="4,35.7" />
-                  <mssgle:LineSegment
-                    End="4.60000000000008,35.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.60000000000008,35.7"
-                    Point2="8.60000000000008,35.7"
-                    Point3="8.60000000000008,39.7" />
-                  <mssgle:LineSegment
-                    End="8.60000000000008,63.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-87.20201171875,40.7,183.0040234375,11.609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8942,11 +8906,47 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de construction de la table de faits.Paths[Sortie de recherche sans correspondance]"
+          TopLeft="426.6,327.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="22.6,71.4"
+              Start="0,0"
+              End="22.6,63.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.7"
+                    Point2="0,35.7"
+                    Point3="4,35.7" />
+                  <mssgle:LineSegment
+                    End="18.6,35.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.6,35.7"
+                    Point2="22.6,35.7"
+                    Point3="22.6,39.7" />
+                  <mssgle:LineSegment
+                    End="22.6,63.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-80.20201171875,40.7,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tâche de construction de la table de faits\Destination OLE DB">
+    design-time-name="Package\Tâche de construction de la table de faits\Destination FaitCarburant">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8959,7 +8959,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tâche de construction de la table de faits\Source OLE DB">
+    design-time-name="Package\Tâche de construction de la table de faits\Source UnqueDB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8972,7 +8972,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8982,7 +8982,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9053,9 +9053,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9089,9 +9087,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9113,9 +9109,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9137,9 +9131,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9161,9 +9153,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9276,79 +9266,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\Tâche de Test fait\DestinationTestt"
-          TopLeft="372.857149206862,508.223535664271" />
-        <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance1]"
-          TopLeft="152.857145460285,247.917650244063">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="6.42857153804937,57.3529419808239"
-              Start="0,0"
-              End="-1.07142846195063,57.3529419808239">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
-                  <mssgle:LineSegment
-                    End="-22.5,53.3529419808239" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5,53.3529419808239"
-                    Point2="-22.5,57.3529419808239"
-                    Point3="-18.5,57.3529419808239" />
-                  <mssgle:LineSegment
-                    End="-1.07142846195063,57.3529419808239" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-114.17701171875,-17.609375,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance]"
-          TopLeft="230.142859222938,183.835296112443">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.7142862373469,43.2823541316194"
-              Start="0,0"
-              End="20.7142862373469,35.7823541316194">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.6411770658097" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.6411770658097"
-                    Point2="0,21.6411770658097"
-                    Point3="4,21.6411770658097" />
-                  <mssgle:LineSegment
-                    End="16.7142862373469,21.6411770658097" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.7142862373469,21.6411770658097"
-                    Point2="20.7142862373469,21.6411770658097"
-                    Point3="20.7142862373469,25.6411770658097" />
-                  <mssgle:LineSegment
-                    End="20.7142862373469,35.7823541316194" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-81.3198686000766,26.6411770658097,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="261.428575880673,532.694124242756" />
         <EdgeLayout
           Id="Package\Tâche de Test fait.Paths[Sortie de source OLE DB]"
           TopLeft="231.400002384186,103.54117733929">
@@ -9372,110 +9290,182 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance4]"
-          TopLeft="326.914288025486,467.564712091961">
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance]"
+          TopLeft="230.142859222938,183.835296112443">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="45.942861181376,61.4588235723099"
+              EndConnector="20.714286237347,43.28235413162"
               Start="0,0"
-              End="38.442861181376,61.4588235723099">
+              End="20.714286237347,35.78235413162">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="18.971430590688,0" />
+                    End="0,17.64117706581" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.971430590688,0"
-                    Point2="22.971430590688,0"
-                    Point3="22.971430590688,4" />
+                    Point1="0,17.64117706581"
+                    Point2="0,21.64117706581"
+                    Point3="4,21.64117706581" />
                   <mssgle:LineSegment
-                    End="22.971430590688,57.4588235723099" />
+                    End="16.714286237347,21.64117706581" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.971430590688,57.4588235723099"
-                    Point2="22.971430590688,61.4588235723099"
-                    Point3="26.971430590688,61.4588235723099" />
+                    Point1="16.714286237347,21.64117706581"
+                    Point2="20.714286237347,21.64117706581"
+                    Point3="20.714286237347,25.64117706581" />
                   <mssgle:LineSegment
-                    End="38.442861181376,61.4588235723099" />
+                    End="20.714286237347,35.78235413162" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-68.705581128062,-17.609375,183.3540234375,11.609375"
+              BoundingBox="-81.1448686000765,26.64117706581,183.0040234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance3]"
-          TopLeft="341.057146907826,404.835299211885">
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance1]"
+          TopLeft="231.314288025486,488.364712091961">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-109.74285888234,41.9294128800758"
+              EndConnector="107.714287855187,44.3294121507951"
               Start="0,0"
-              End="-109.74285888234,34.4294128800758">
+              End="107.714287855187,36.8294121507951">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.9647064400379" />
+                    End="0,18.1647060753975" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.9647064400379"
-                    Point2="0,20.9647064400379"
-                    Point3="-4,20.9647064400379" />
+                    Point1="0,18.1647060753975"
+                    Point2="0,22.1647060753975"
+                    Point3="4,22.1647060753975" />
                   <mssgle:LineSegment
-                    End="-105.74285888234,20.9647064400379" />
+                    End="103.714287855187,22.1647060753975" />
                   <mssgle:CubicBezierSegment
-                    Point1="-105.74285888234,20.9647064400379"
-                    Point2="-109.74285888234,20.9647064400379"
-                    Point3="-109.74285888234,24.9647064400379" />
+                    Point1="103.714287855187,22.1647060753975"
+                    Point2="107.714287855187,22.1647060753975"
+                    Point3="107.714287855187,26.1647060753975" />
                   <mssgle:LineSegment
-                    End="-109.74285888234,34.4294128800758" />
+                    End="107.714287855187,36.8294121507951" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-146.54844115992,25.9647064400379,183.3540234375,11.609375"
+              BoundingBox="-37.6448677911564,27.1647060753975,183.0040234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance2]"
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance2]"
+          TopLeft="152.857145460285,247.917650244063">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="6.428571538049,57.352941980824"
+              Start="0,0"
+              End="-1.071428461951,57.352941980824">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,53.352941980824" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,53.352941980824"
+                    Point2="-22.5,57.352941980824"
+                    Point3="-18.5,57.352941980824" />
+                  <mssgle:LineSegment
+                    End="-1.071428461951,57.352941980824" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-114.00201171875,-17.609375,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance3]"
           TopLeft="252.485716998334,326.070592224887">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="88.5714299094921,37.1647069869982"
+              EndConnector="88.571429909492,37.1647069869979"
               Start="0,0"
-              End="88.5714299094921,29.6647069869982">
+              End="88.571429909492,29.6647069869979">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.5823534934991" />
+                    End="0,14.582353493499" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.5823534934991"
-                    Point2="0,18.5823534934991"
-                    Point3="4,18.5823534934991" />
+                    Point1="0,14.582353493499"
+                    Point2="0,18.582353493499"
+                    Point3="4,18.582353493499" />
                   <mssgle:LineSegment
-                    End="84.5714299094921,18.5823534934991" />
+                    End="84.571429909492,18.582353493499" />
                   <mssgle:CubicBezierSegment
-                    Point1="84.5714299094921,18.5823534934991"
-                    Point2="88.5714299094921,18.5823534934991"
-                    Point3="88.5714299094921,22.5823534934991" />
+                    Point1="84.571429909492,18.582353493499"
+                    Point2="88.571429909492,18.582353493499"
+                    Point3="88.571429909492,22.582353493499" />
                   <mssgle:LineSegment
-                    End="88.5714299094921,29.6647069869982" />
+                    End="88.571429909492,29.6647069869979" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-47.391296764004,23.5823534934991,183.3540234375,11.609375"
+              BoundingBox="-47.216296764004,23.582353493499,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche sans correspondance4]"
+          TopLeft="341.057146907826,404.835299211885">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-109.74285888234,41.929412880076"
+              Start="0,0"
+              End="-109.74285888234,34.429412880076">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.964706440038" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.964706440038"
+                    Point2="0,20.964706440038"
+                    Point3="-4,20.964706440038" />
+                  <mssgle:LineSegment
+                    End="-105.74285888234,20.964706440038" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-105.74285888234,20.964706440038"
+                    Point2="-109.74285888234,20.964706440038"
+                    Point3="-109.74285888234,24.964706440038" />
+                  <mssgle:LineSegment
+                    End="-109.74285888234,34.429412880076" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-146.37344115992,25.964706440038,183.0040234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10243,7 +10233,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance]"
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance]"
           TopLeft="120.285712229962,359.247058383816">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10274,12 +10264,12 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-87.3436783712251,62.6803931453235,183.3540234375,11.609375"
+              BoundingBox="-87.1686783712251,62.6803931453235,183.0040234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance1]"
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance1]"
           TopLeft="304.814289260154,267.88235540786">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10298,12 +10288,12 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,55.292372524697,183.3540234375,11.609375"
+              BoundingBox="-91.50201171875,55.292372524697,183.0040234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance2]"
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance2]"
           TopLeft="478.528579201503,295.658826307112">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10322,12 +10312,12 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,59.0276665404595,183.3540234375,11.609375"
+              BoundingBox="-91.50201171875,59.0276665404595,183.0040234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance3]"
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance3]"
           TopLeft="781.771440127431,245.011767558656">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10358,12 +10348,12 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-86.3912973600505,65.6411776127695,183.3540234375,11.609375"
+              BoundingBox="-86.2162973600505,65.6411776127695,183.0040234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance4]"
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance4]"
           TopLeft="1003.46985665622,369.403926165954">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10382,7 +10372,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,10.0897575116625,183.3540234375,11.609375"
+              BoundingBox="-91.50201171875,10.0897575116625,183.0040234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
