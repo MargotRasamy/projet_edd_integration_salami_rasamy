@@ -1,0 +1,9 @@
+DELETE FROM dbo.FaitCarburant
+DELETE FROM dbo.DimPresence
+DELETE FROM dbo.DimTypeCarburant
+DELETE FROM dbo.DimStationService
+DELETE FROM dbo.DimAutomate24
+DELETE FROM dbo.DimAdresse
+DELETE FROM dbo.DestinationDataGouv
+DELETE FROM dbo.DestinationNormalizedUniqueDB
+DELETE FROM dbo.DestinationOpenDataSoft

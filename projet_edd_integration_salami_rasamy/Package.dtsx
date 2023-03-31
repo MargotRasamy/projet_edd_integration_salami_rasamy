@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{A13FA874-27EC-4DA6-8AAF-CE43C9D419A1}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{D7467D56-1C2C-46C8-A396-49111763CEBC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4857,30 +4857,30 @@ where [refTable].[nom_carburant] = ?</property>
               name="Sortie de colonne dérivée"
               startId="Package\Tâche d'injection des données de dimensions\Uppercase.Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance]"
-              endId="Package\Tâche d'injection des données de dimensions\Destination DimTypeCarburant.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche sans correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimTypeCarburant.Outputs[Sortie de recherche sans correspondance]" />
-            <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance1]"
-              endId="Package\Tâche d'injection des données de dimensions\Destination DimAutomate24.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche sans correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimAutomate24.Outputs[Sortie de recherche sans correspondance]" />
-            <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance2]"
-              endId="Package\Tâche d'injection des données de dimensions\Destination DimAdresse.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche sans correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimAdresse.Outputs[Sortie de recherche sans correspondance]" />
-            <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance3]"
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance]"
               endId="Package\Tâche d'injection des données de dimensions\Destination DimStationService.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche sans correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimStationService.Outputs[Sortie de recherche sans correspondance]" />
+              name="Sortie de recherche avec correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimStationService.Outputs[Sortie de recherche avec correspondance]" />
             <path
-              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance4]"
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance1]"
               endId="Package\Tâche d'injection des données de dimensions\Destination DimPresence.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche sans correspondance"
-              startId="Package\Tâche d'injection des données de dimensions\Recherche DimPresence.Outputs[Sortie de recherche sans correspondance]" />
+              name="Sortie de recherche avec correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimPresence.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance2]"
+              endId="Package\Tâche d'injection des données de dimensions\Destination DimTypeCarburant.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimTypeCarburant.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance3]"
+              endId="Package\Tâche d'injection des données de dimensions\Destination DimAutomate24.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimAutomate24.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance4]"
+              endId="Package\Tâche d'injection des données de dimensions\Destination DimAdresse.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\Tâche d'injection des données de dimensions\Recherche DimAdresse.Outputs[Sortie de recherche avec correspondance]" />
             <path
               refId="Package\Tâche d'injection des données de dimensions.Paths[Sortie de source OLE DB]"
               endId="Package\Tâche d'injection des données de dimensions\Trier.Inputs[Entrée de tri]"
@@ -5445,14 +5445,13 @@ where [refTable].[id_dim_adresse] = ? and [refTable].[id_dim_automate_24] = ? an
                   dataType="System.String"
                   description="Commande SQL à exécuter."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT id_dim_adresse, id_dim_automate_24, id_dim_presence, id_dim_type_carburant, id_fonctionnel_station_service, prix_valeur, dbo.DimStationService.id_dim_station_service
-FROM 
-dbo.DestinationNormalizedUniqueDB JOIN
-dbo.DimStationService ON dbo.DestinationNormalizedUniqueDB.id_dim_station_service = dbo.DimStationService.id_fonctionnel_station_service JOIN
-dbo.DimTypeCarburant ON dbo.DestinationNormalizedUniqueDB.nom_carburant = dbo.DestinationNormalizedUniqueDB.nom_carburant JOIN
-dbo.DimAdresse ON dbo.DestinationNormalizedUniqueDB.adresse = dbo.DimAdresse.adresse JOIN
-dbo.DimPresence ON dbo.DestinationNormalizedUniqueDB.presence = dbo.DimPresence.presence JOIN
-dbo.DimAutomate24 ON dbo.DestinationNormalizedUniqueDB.automate_24 = dbo.DimAutomate24.automate_24</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DimAdresse.id_dim_adresse, DimAutomate24.id_dim_automate_24, DimPresence.id_dim_presence, DimTypeCarburant.id_dim_type_carburant, DestinationNormalizedUniqueDB.prix_valeur, DimStationService.id_dim_station_service
+FROM     DestinationNormalizedUniqueDB INNER JOIN
+                  DimStationService ON DestinationNormalizedUniqueDB.id_dim_station_service = DimStationService.id_fonctionnel_station_service AND DestinationNormalizedUniqueDB.nom = DestinationNormalizedUniqueDB.nom INNER JOIN
+                  DimTypeCarburant ON DestinationNormalizedUniqueDB.nom_carburant = DestinationNormalizedUniqueDB.nom_carburant INNER JOIN
+                  DimAdresse ON DestinationNormalizedUniqueDB.adresse = DimAdresse.adresse AND DestinationNormalizedUniqueDB.code_postal = DimAdresse.code_postal INNER JOIN
+                  DimPresence ON DestinationNormalizedUniqueDB.presence = DimPresence.presence INNER JOIN
+                  DimAutomate24 ON DestinationNormalizedUniqueDB.automate_24 = DimAutomate24.automate_24</property>
                 <property
                   dataType="System.String"
                   description="Variable contenant la commande SQL à exécuter."
@@ -5557,11 +5556,6 @@ dbo.DimAutomate24 ON dbo.DestinationNormalizedUniqueDB.automate_24 = dbo.DimAuto
                       refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_type_carburant]"
                       dataType="i4"
                       name="id_dim_type_carburant" />
-                    <externalMetadataColumn
-                      refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_fonctionnel_station_service]"
-                      dataType="wstr"
-                      length="255"
-                      name="id_fonctionnel_station_service" />
                     <externalMetadataColumn
                       refId="Package\Tâche de construction de la table de faits\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[id_dim_adresse]"
                       dataType="i4"
@@ -7506,11 +7500,11 @@ UNPIVOT
           version="1">
           <components>
             <component
-              refId="Package\Tâche de Test fait\Destination OLE DB"
+              refId="Package\Tâche de Test fait\DestinationTestt"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
               description="Destination OLE DB"
-              name="Destination OLE DB"
+              name="DestinationTestt"
               usesDispositions="true"
               version="4">
               <properties>
@@ -7521,7 +7515,7 @@ UNPIVOT
                 <property
                   dataType="System.String"
                   description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowset">[DestinationTemp]</property>
+                  name="OpenRowset">[DestinationTestt]</property>
                 <property
                   dataType="System.String"
                   description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
@@ -7570,7 +7564,7 @@ dbo.DimAutomate24 ON dbo.DestinationNormalizedUniqueDB.automate_24 = dbo.DimAuto
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tâche de Test fait\Destination OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Tâche de Test fait\DestinationTestt.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-Q6MP172.projet_edd_db_salami_rasamy]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-Q6MP172.projet_edd_db_salami_rasamy]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
@@ -7578,67 +7572,67 @@ dbo.DimAutomate24 ON dbo.DestinationNormalizedUniqueDB.automate_24 = dbo.DimAuto
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB]"
                   errorOrTruncationOperation="Insérer"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrée de destination OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[prix_valeur]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].Columns[prix_valeur]"
                       cachedDataType="r8"
                       cachedName="prix_valeur"
-                      externalMetadataColumnId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[prix_valeur]"
+                      externalMetadataColumnId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[prix_valeur]"
                       lineageId="Package\Tâche de Test fait\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[prix_valeur]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_station_service]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[id_dim_station_service]"
                       dataType="wstr"
                       length="255"
                       name="id_dim_station_service" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[prix_valeur]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[prix_valeur]"
                       dataType="r8"
                       name="prix_valeur" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[code_postal]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[code_postal]"
                       dataType="wstr"
                       length="255"
                       name="code_postal" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[presence]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[presence]"
                       dataType="wstr"
                       length="255"
                       name="presence" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[adresse]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[adresse]"
                       dataType="wstr"
                       length="255"
                       name="adresse" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ville]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[ville]"
                       dataType="wstr"
                       length="255"
                       name="ville" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[automate_24]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[automate_24]"
                       dataType="wstr"
                       length="255"
                       name="automate_24" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[marque]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[marque]"
                       dataType="wstr"
                       length="255"
                       name="marque" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[nom]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[nom]"
                       dataType="wstr"
                       length="255"
                       name="nom" />
                     <externalMetadataColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[nom_carburant]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB].ExternalColumns[nom_carburant]"
                       dataType="wstr"
                       length="128"
                       name="nom_carburant" />
@@ -7647,22 +7641,22 @@ dbo.DimAutomate24 ON dbo.DestinationNormalizedUniqueDB.automate_24 = dbo.DimAuto
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tâche de Test fait\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  refId="Package\Tâche de Test fait\DestinationTestt.Outputs[Sortie d'erreur de destination OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de destination OLE DB"
-                  synchronousInputId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  synchronousInputId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tâche de Test fait\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de Test fait\DestinationTestt.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tâche de Test fait\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tâche de Test fait\DestinationTestt.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tâche de Test fait\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de Test fait\DestinationTestt.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -8767,7 +8761,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
               startId="Package\Tâche de Test fait\Recherche DimAutomate24.Outputs[Sortie de recherche avec correspondance]" />
             <path
               refId="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance4]"
-              endId="Package\Tâche de Test fait\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              endId="Package\Tâche de Test fait\DestinationTestt.Inputs[Entrée de destination OLE DB]"
               name="Sortie de recherche avec correspondance"
               startId="Package\Tâche de Test fait\Recherche DimPresence.Outputs[Sortie de recherche avec correspondance]" />
             <path
@@ -8811,6 +8805,10 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
           Id="Package\Tâche de normalisation de données"
           TopLeft="151.428574007384,168.235296477084" />
         <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Tâche de Test fait"
+          TopLeft="173.571431527333,390.000005469603" />
+        <NodeLayout
           Size="273.6,41.6"
           Id="Package\Tâche d'importation des données sources"
           TopLeft="138.571430931286,76.4705893077653" />
@@ -8840,10 +8838,6 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163.2,41.6"
-          Id="Package\Tâche de Test fait"
-          TopLeft="173.571431527333,390.000005469603" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -8887,9 +8881,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8947,9 +8939,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9243,6 +9233,385 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Tâche de normalisation de données\Source Data Gouv DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Tâche de Test fait">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="196,41.6"
+          Id="Package\Tâche de Test fait\Recherche DimCarburant"
+          TopLeft="152.857145460285,227.117650244063" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Tâche de Test fait\Recherche DimAdresse"
+          TopLeft="159.285716998334,284.470592224887" />
+        <NodeLayout
+          Size="216,41.6"
+          Id="Package\Tâche de Test fait\Recherche DimStationService"
+          TopLeft="122.142859222938,142.235296112443" />
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\Tâche de Test fait\Recherche DimAutomate24"
+          TopLeft="237.857146907826,363.235299211885" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Tâche de Test fait\Source OLE DB"
+          TopLeft="157.857145545434,61.9411773392898" />
+        <NodeLayout
+          Size="191.2,41.6"
+          Id="Package\Tâche de Test fait\Recherche DimPresence"
+          TopLeft="135.714288025486,446.764712091961" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Tâche de Test fait\DestinationTestt"
+          TopLeft="372.857149206862,508.223535664271" />
+        <EdgeLayout
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance1]"
+          TopLeft="152.857145460285,247.917650244063">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="6.42857153804937,57.3529419808239"
+              Start="0,0"
+              End="-1.07142846195063,57.3529419808239">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,53.3529419808239" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,53.3529419808239"
+                    Point2="-22.5,57.3529419808239"
+                    Point3="-18.5,57.3529419808239" />
+                  <mssgle:LineSegment
+                    End="-1.07142846195063,57.3529419808239" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-114.17701171875,-17.609375,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance]"
+          TopLeft="230.142859222938,183.835296112443">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.7142862373469,43.2823541316194"
+              Start="0,0"
+              End="20.7142862373469,35.7823541316194">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.6411770658097" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.6411770658097"
+                    Point2="0,21.6411770658097"
+                    Point3="4,21.6411770658097" />
+                  <mssgle:LineSegment
+                    End="16.7142862373469,21.6411770658097" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.7142862373469,21.6411770658097"
+                    Point2="20.7142862373469,21.6411770658097"
+                    Point3="20.7142862373469,25.6411770658097" />
+                  <mssgle:LineSegment
+                    End="20.7142862373469,35.7823541316194" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-81.3198686000766,26.6411770658097,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de Test fait.Paths[Sortie de source OLE DB]"
+          TopLeft="231.400002384186,103.54117733929">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.6941187731535"
+              Start="0,0"
+              End="0,31.1941187731535">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.1941187731535" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance4]"
+          TopLeft="326.914288025486,467.564712091961">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45.942861181376,61.4588235723099"
+              Start="0,0"
+              End="38.442861181376,61.4588235723099">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.971430590688,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.971430590688,0"
+                    Point2="22.971430590688,0"
+                    Point3="22.971430590688,4" />
+                  <mssgle:LineSegment
+                    End="22.971430590688,57.4588235723099" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.971430590688,57.4588235723099"
+                    Point2="22.971430590688,61.4588235723099"
+                    Point3="26.971430590688,61.4588235723099" />
+                  <mssgle:LineSegment
+                    End="38.442861181376,61.4588235723099" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-68.705581128062,-17.609375,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance3]"
+          TopLeft="341.057146907826,404.835299211885">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-109.74285888234,41.9294128800758"
+              Start="0,0"
+              End="-109.74285888234,34.4294128800758">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.9647064400379" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.9647064400379"
+                    Point2="0,20.9647064400379"
+                    Point3="-4,20.9647064400379" />
+                  <mssgle:LineSegment
+                    End="-105.74285888234,20.9647064400379" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-105.74285888234,20.9647064400379"
+                    Point2="-109.74285888234,20.9647064400379"
+                    Point3="-109.74285888234,24.9647064400379" />
+                  <mssgle:LineSegment
+                    End="-109.74285888234,34.4294128800758" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-146.54844115992,25.9647064400379,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance2]"
+          TopLeft="252.485716998334,326.070592224887">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="88.5714299094921,37.1647069869982"
+              Start="0,0"
+              End="88.5714299094921,29.6647069869982">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5823534934991" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5823534934991"
+                    Point2="0,18.5823534934991"
+                    Point3="4,18.5823534934991" />
+                  <mssgle:LineSegment
+                    End="84.5714299094921,18.5823534934991" />
+                  <mssgle:CubicBezierSegment
+                    Point1="84.5714299094921,18.5823534934991"
+                    Point2="88.5714299094921,18.5823534934991"
+                    Point3="88.5714299094921,22.5823534934991" />
+                  <mssgle:LineSegment
+                    End="88.5714299094921,29.6647069869982" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-47.391296764004,23.5823534934991,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de Test fait\Recherche DimCarburant">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTypeCarburant]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de Test fait\Recherche DimAdresse">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAdresse]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de Test fait\Recherche DimStationService">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimStationService]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de Test fait\Recherche DimAutomate24">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAutomate24]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de Test fait\Source OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de Test fait\Recherche DimPresence">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimPresence]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de Test fait\DestinationTestt">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9554,9 +9923,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9578,9 +9945,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9614,9 +9979,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9650,9 +10013,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9674,9 +10035,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9710,9 +10069,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9746,9 +10103,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9782,9 +10137,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9818,9 +10171,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9854,153 +10205,7 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance4]"
-          TopLeft="304.814289260154,267.88235540786">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,129.694120049394"
-              Start="0,0"
-              End="0,122.194120049394">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,122.194120049394" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.50201171875,55.2923725246971,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance3]"
-          TopLeft="120.285712229962,359.247058383816">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8.6666666950498,115.360786290647"
-              Start="0,0"
-              End="8.6666666950498,107.860786290647">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.6803931453235" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,53.6803931453235"
-                    Point2="0,57.6803931453235"
-                    Point3="4,57.6803931453235" />
-                  <mssgle:LineSegment
-                    End="4.6666666950498,57.6803931453235" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.6666666950498,57.6803931453235"
-                    Point2="8.6666666950498,57.6803931453235"
-                    Point3="8.6666666950498,61.6803931453235" />
-                  <mssgle:LineSegment
-                    End="8.6666666950498,107.860786290647" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-87.1686783712251,62.6803931453235,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance2]"
-          TopLeft="1003.46985665622,369.403926165954">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.2888900233248"
-              Start="0,0"
-              End="0,31.7888900233248">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.7888900233248" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.50201171875,10.0897575116624,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance1]"
-          TopLeft="781.771440127431,245.011767558656">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="10.5714287173989,121.28235522554"
-              Start="0,0"
-              End="10.5714287173989,113.78235522554">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.6411776127699" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,56.6411776127699"
-                    Point2="0,60.6411776127699"
-                    Point3="4,60.6411776127699" />
-                  <mssgle:LineSegment
-                    End="6.57142871739893,60.6411776127699" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.57142871739893,60.6411776127699"
-                    Point2="10.5714287173989,60.6411776127699"
-                    Point3="10.5714287173989,64.6411776127699" />
-                  <mssgle:LineSegment
-                    End="10.5714287173989,113.78235522554" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-86.2162973600505,65.6411776127699,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance]"
-          TopLeft="478.528579201503,295.658826307112">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,137.164708080919"
-              Start="0,0"
-              End="0,129.664708080919">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,129.664708080919" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.50201171875,59.0276665404595,183.0040234375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10034,8 +10239,150 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance]"
+          TopLeft="120.285712229962,359.247058383816">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.6666666950498,115.360786290647"
+              Start="0,0"
+              End="8.6666666950498,107.860786290647">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.6803931453235" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.6803931453235"
+                    Point2="0,57.6803931453235"
+                    Point3="4,57.6803931453235" />
+                  <mssgle:LineSegment
+                    End="4.6666666950498,57.6803931453235" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.6666666950498,57.6803931453235"
+                    Point2="8.6666666950498,57.6803931453235"
+                    Point3="8.6666666950498,61.6803931453235" />
+                  <mssgle:LineSegment
+                    End="8.6666666950498,107.860786290647" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-87.3436783712251,62.6803931453235,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance1]"
+          TopLeft="304.814289260154,267.88235540786">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,129.694120049394"
+              Start="0,0"
+              End="0,122.194120049394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,122.194120049394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,55.292372524697,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance2]"
+          TopLeft="478.528579201503,295.658826307112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,137.164708080919"
+              Start="0,0"
+              End="0,129.664708080919">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,129.664708080919" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,59.0276665404595,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance3]"
+          TopLeft="781.771440127431,245.011767558656">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.571428717399,121.282355225539"
+              Start="0,0"
+              End="10.571428717399,113.782355225539">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.6411776127695" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.6411776127695"
+                    Point2="0,60.6411776127695"
+                    Point3="4,60.6411776127695" />
+                  <mssgle:LineSegment
+                    End="6.57142871739904,60.6411776127695" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.57142871739904,60.6411776127695"
+                    Point2="10.571428717399,60.6411776127695"
+                    Point3="10.571428717399,64.6411776127695" />
+                  <mssgle:LineSegment
+                    End="10.571428717399,113.782355225539" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-86.3912973600505,65.6411776127695,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche avec correspondance4]"
+          TopLeft="1003.46985665622,369.403926165954">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.2888900233249"
+              Start="0,0"
+              End="0,31.7888900233249">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7888900233249" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,10.0897575116625,183.3540234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10284,385 +10631,6 @@ where [refTable].[id_fonctionnel_station_service] = ? and [refTable].[marque] = 
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Tâche de Test fait">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Tâche de Test fait\Source OLE DB"
-          TopLeft="157.857145545434,61.9411773392898" />
-        <NodeLayout
-          Size="216,41.6"
-          Id="Package\Tâche de Test fait\Recherche DimStationService"
-          TopLeft="122.142859222938,142.235296112443" />
-        <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de source OLE DB]"
-          TopLeft="231.400002384186,103.54117733929">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.6941187731535"
-              Start="0,0"
-              End="0,31.1941187731535">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.1941187731535" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="196,41.6"
-          Id="Package\Tâche de Test fait\Recherche DimCarburant"
-          TopLeft="152.857145460285,227.117650244063" />
-        <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Tâche de Test fait\Recherche DimAdresse"
-          TopLeft="159.285716998334,284.470592224887" />
-        <NodeLayout
-          Size="206.4,41.6"
-          Id="Package\Tâche de Test fait\Recherche DimAutomate24"
-          TopLeft="237.857146907826,363.235299211885" />
-        <NodeLayout
-          Size="191.2,41.6"
-          Id="Package\Tâche de Test fait\Recherche DimPresence"
-          TopLeft="135.714288025486,446.764712091961" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Tâche de Test fait\Destination OLE DB"
-          TopLeft="372.857149206862,508.223535664271" />
-        <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance]"
-          TopLeft="230.142859222938,183.835296112443">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.7142862373469,43.2823541316194"
-              Start="0,0"
-              End="20.7142862373469,35.7823541316194">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.6411770658097" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.6411770658097"
-                    Point2="0,21.6411770658097"
-                    Point3="4,21.6411770658097" />
-                  <mssgle:LineSegment
-                    End="16.7142862373469,21.6411770658097" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.7142862373469,21.6411770658097"
-                    Point2="20.7142862373469,21.6411770658097"
-                    Point3="20.7142862373469,25.6411770658097" />
-                  <mssgle:LineSegment
-                    End="20.7142862373469,35.7823541316194" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-81.3198686000766,26.6411770658097,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance1]"
-          TopLeft="152.857145460285,247.917650244063">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="6.42857153804937,57.3529419808239"
-              Start="0,0"
-              End="-1.07142846195063,57.3529419808239">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
-                  <mssgle:LineSegment
-                    End="-22.5,53.3529419808239" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5,53.3529419808239"
-                    Point2="-22.5,57.3529419808239"
-                    Point3="-18.5,57.3529419808239" />
-                  <mssgle:LineSegment
-                    End="-1.07142846195063,57.3529419808239" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-114.17701171875,-17.609375,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance2]"
-          TopLeft="252.485716998334,326.070592224887">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="88.5714299094921,37.1647069869982"
-              Start="0,0"
-              End="88.5714299094921,29.6647069869982">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.5823534934991" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.5823534934991"
-                    Point2="0,18.5823534934991"
-                    Point3="4,18.5823534934991" />
-                  <mssgle:LineSegment
-                    End="84.5714299094921,18.5823534934991" />
-                  <mssgle:CubicBezierSegment
-                    Point1="84.5714299094921,18.5823534934991"
-                    Point2="88.5714299094921,18.5823534934991"
-                    Point3="88.5714299094921,22.5823534934991" />
-                  <mssgle:LineSegment
-                    End="88.5714299094921,29.6647069869982" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-47.391296764004,23.5823534934991,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance3]"
-          TopLeft="341.057146907826,404.835299211885">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-109.74285888234,41.9294128800758"
-              Start="0,0"
-              End="-109.74285888234,34.4294128800758">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.9647064400379" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.9647064400379"
-                    Point2="0,20.9647064400379"
-                    Point3="-4,20.9647064400379" />
-                  <mssgle:LineSegment
-                    End="-105.74285888234,20.9647064400379" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-105.74285888234,20.9647064400379"
-                    Point2="-109.74285888234,20.9647064400379"
-                    Point3="-109.74285888234,24.9647064400379" />
-                  <mssgle:LineSegment
-                    End="-109.74285888234,34.4294128800758" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-146.54844115992,25.9647064400379,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche de Test fait.Paths[Sortie de recherche avec correspondance4]"
-          TopLeft="326.914288025486,467.564712091961">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="45.9428611813763,61.4588235723106"
-              Start="0,0"
-              End="38.4428611813763,61.4588235723106">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.9714305906882,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.9714305906882,0"
-                    Point2="22.9714305906882,0"
-                    Point3="22.9714305906882,4" />
-                  <mssgle:LineSegment
-                    End="22.9714305906882,57.4588235723106" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.9714305906882,57.4588235723106"
-                    Point2="22.9714305906882,61.4588235723106"
-                    Point3="26.9714305906882,61.4588235723106" />
-                  <mssgle:LineSegment
-                    End="38.4428611813763,61.4588235723106" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-68.7055811280618,-17.609375,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tâche de Test fait\Source OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tâche de Test fait\Recherche DimStationService">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimStationService]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tâche de Test fait\Recherche DimCarburant">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimTypeCarburant]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tâche de Test fait\Recherche DimAdresse">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimAdresse]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tâche de Test fait\Recherche DimAutomate24">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimAutomate24]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tâche de Test fait\Recherche DimPresence">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimPresence]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tâche de Test fait\Destination OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
