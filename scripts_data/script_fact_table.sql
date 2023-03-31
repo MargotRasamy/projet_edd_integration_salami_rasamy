@@ -1,10 +1,8 @@
-SELECT id_dim_adresse, id_dim_automate_24, id_dim_presence, id_dim_type_carburant, id_fonctionnel_station_service, prix_valeur, dbo.DimStationService.id_dim_station_service
-FROM 
-dbo.DestinationNormalizedUniqueDB JOIN
-dbo.DimStationService ON dbo.DestinationNormalizedUniqueDB.id_dim_station_service = dbo.DimStationService.id_fonctionnel_station_service AND dbo.DestinationNormalizedUniqueDB.nom = dbo.DestinationNormalizedUniqueDB.nom JOIN
-dbo.DimTypeCarburant ON dbo.DestinationNormalizedUniqueDB.nom_carburant = dbo.DestinationNormalizedUniqueDB.nom_carburant JOIN
-dbo.DimAdresse ON dbo.DestinationNormalizedUniqueDB.adresse = dbo.DimAdresse.adresse AND dbo.DestinationNormalizedUniqueDB.code_postal = dbo.DimAdresse.code_postal JOIN
-dbo.DimPresence ON dbo.DestinationNormalizedUniqueDB.presence = dbo.DimPresence.presence JOIN
-dbo.DimAutomate24 ON dbo.DestinationNormalizedUniqueDB.automate_24 = dbo.DimAutomate24.automate_24
-
-
+SELECT DimStationService.id_dim_station_service, DimTypeCarburant.id_dim_type_carburant, DestinationNormalizedUniqueDB.prix_valeur,  DimAdresse.id_dim_adresse, DimPresence.id_dim_presence, DimAutomate24.id_dim_automate_24
+FROM     DestinationNormalizedUniqueDB LEFT JOIN
+                  DimStationService ON DestinationNormalizedUniqueDB.id_dim_station_service = DimStationService.id_fonctionnel_station_service AND DestinationNormalizedUniqueDB.nom = DestinationNormalizedUniqueDB.nom INNER JOIN
+				  DimAdresse ON DestinationNormalizedUniqueDB.adresse = DimAdresse.adresse INNER JOIN
+				  DimTypeCarburant ON DestinationNormalizedUniqueDB.nom_carburant = DimTypeCarburant.nom_carburant INNER JOIN
+				  DimAutomate24 ON DestinationNormalizedUniqueDB.automate_24 = DimAutomate24.automate_24 INNER JOIN
+				  DimPresence ON DestinationNormalizedUniqueDB.presence = DimPresence.presence
+ORDER BY DimStationService.id_dim_station_service
