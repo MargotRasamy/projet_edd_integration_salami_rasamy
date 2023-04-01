@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{C7B2F3D2-284C-4388-8FFE-7B7A402EF160}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{D4BE17FB-95DC-4E32-9A07-2DD58D4CA086}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -7512,7 +7512,7 @@ UNPIVOT
         <NodeLayout
           Size="272.8,41.6"
           Id="Package\Tâche de construction de la table de faits"
-          TopLeft="121.428573496488,328.058828130313" />
+          TopLeft="134.285716572587,328.058828130313" />
         <NodeLayout
           Size="245.6,41.6"
           Id="Package\Tâche de normalisation de données"
@@ -7524,21 +7524,21 @@ UNPIVOT
         <NodeLayout
           Size="291.2,41.6"
           Id="Package\Tâche d'injection des données de dimensions"
-          TopLeft="115.714287684888,245.470591677926" />
+          TopLeft="124.285716402287,247.000003464081" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="274.800002469335,118.070589307765">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50.164707169319"
+              EndConnector="0,50.1647071693187"
               Start="0,0"
-              End="0,42.664707169319">
+              End="0,42.6647071693187">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.664707169319" />
+                    End="0,42.6647071693187" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7556,6 +7556,10 @@ UNPIVOT
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Tâche de construction de la table de faits\Destination FaitCarburant"
+          TopLeft="421,469" />
+        <NodeLayout
           Size="157.6,41.6"
           Id="Package\Tâche de construction de la table de faits\Source UnqueDB"
           TopLeft="358,123" />
@@ -7563,6 +7567,10 @@ UNPIVOT
           Size="229.6,41.6"
           Id="Package\Tâche de construction de la table de faits\Conversion du prix du carburant"
           TopLeft="340,195" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\Tâche de construction de la table de faits\Recherche FaitCarburant"
+          TopLeft="389,337" />
         <EdgeLayout
           Id="Package\Tâche de construction de la table de faits.Paths[Sortie de source OLE DB]"
           TopLeft="436.8,164.6">
@@ -7597,48 +7605,6 @@ UNPIVOT
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\Tâche de construction de la table de faits\Recherche FaitCarburant"
-          TopLeft="389,337" />
-        <EdgeLayout
-          Id="Package\Tâche de construction de la table de faits.Paths[Sortie de conversion de données]"
-          TopLeft="454.8,236.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="31.4,100.4"
-              Start="0,0"
-              End="31.4,92.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.2"
-                    Point2="0,50.2"
-                    Point3="4,50.2" />
-                  <mssgle:LineSegment
-                    End="27.4,50.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27.4,50.2"
-                    Point2="31.4,50.2"
-                    Point3="31.4,54.2" />
-                  <mssgle:LineSegment
-                    End="31.4,92.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="198.4,41.6"
-          Id="Package\Tâche de construction de la table de faits\Destination FaitCarburant"
-          TopLeft="421,469" />
         <EdgeLayout
           Id="Package\Tâche de construction de la table de faits.Paths[Sortie de recherche sans correspondance]"
           TopLeft="486.2,378.6">
@@ -7675,12 +7641,82 @@ UNPIVOT
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de construction de la table de faits.Paths[Sortie de conversion de données]"
+          TopLeft="454.8,236.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.4,100.4"
+              Start="0,0"
+              End="31.4,92.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.2"
+                    Point2="0,50.2"
+                    Point3="4,50.2" />
+                  <mssgle:LineSegment
+                    End="27.4,50.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.4,50.2"
+                    Point2="31.4,50.2"
+                    Point3="31.4,54.2" />
+                  <mssgle:LineSegment
+                    End="31.4,92.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Tâche de construction de la table de faits\Destination FaitCarburant">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Tâche de construction de la table de faits\Source UnqueDB">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de construction de la table de faits\Recherche FaitCarburant">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FaitCarburant]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -7698,7 +7734,7 @@ UNPIVOT
         <NodeLayout
           Size="230.4,41.6"
           Id="Package\Tâche de normalisation de données\DestinationNormalizedUniqueDB"
-          TopLeft="347.693528396181,538.874309522449" />
+          TopLeft="358.693528396181,461.874309522449" />
         <NodeLayout
           Size="223.2,41.6"
           Id="Package\Tâche de normalisation de données\Source Open data soft Unpivot"
@@ -7855,37 +7891,25 @@ UNPIVOT
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tâche de normalisation de données.Paths[NormalizedDB]"
-          TopLeft="475.244451067183,370.096736196865">
+          TopLeft="474.568989731682,370.096736196865">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-12.3509226710021,168.777573325584"
+              EndConnector="0,91.777573325584"
               Start="0,0"
-              End="-12.3509226710021,161.277573325584">
+              End="0,84.277573325584">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.388786662792" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,80.388786662792"
-                    Point2="0,84.388786662792"
-                    Point3="-4,84.388786662792" />
-                  <mssgle:LineSegment
-                    End="-8.35092267100208,84.388786662792" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8.35092267100208,84.388786662792"
-                    Point2="-12.3509226710021,84.388786662792"
-                    Point3="-12.3509226710021,88.388786662792" />
-                  <mssgle:LineSegment
-                    End="-12.3509226710021,161.277573325584" />
+                    End="0,84.277573325584" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-37.611281648001,89.388786662792,62.871640625,9.7490234375"
+              BoundingBox="-31.4358203125,37.264274944042,62.871640625,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7935,7 +7959,7 @@ UNPIVOT
     design-time-name="Package\Tâche d'importation des données sources">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="184,41.6"
           Id="Package\Tâche d'importation des données sources\Source Open data soft"
@@ -7979,9 +8003,7 @@ UNPIVOT
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8003,9 +8025,7 @@ UNPIVOT
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8027,9 +8047,7 @@ UNPIVOT
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8051,9 +8069,7 @@ UNPIVOT
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8517,120 +8533,26 @@ UNPIVOT
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de colonne dérivée]"
-          TopLeft="988.571436040256,194.494119320114">
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance4]"
+          TopLeft="1003.46985665622,369.403926165954">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9.0571431612484,37.4117657354545"
+              EndConnector="0,39.2888900233249"
               Start="0,0"
-              End="9.0571431612484,29.9117657354545">
+              End="0,31.7888900233249">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.7058828677273" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.7058828677273"
-                    Point2="0,18.7058828677273"
-                    Point3="4,18.7058828677273" />
-                  <mssgle:LineSegment
-                    End="5.0571431612484,18.7058828677273" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.0571431612484,18.7058828677273"
-                    Point2="9.0571431612484,18.7058828677273"
-                    Point3="9.0571431612484,22.7058828677273" />
-                  <mssgle:LineSegment
-                    End="9.0571431612484,29.9117657354545" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance]"
-          TopLeft="120.285712229962,359.247058383816">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8.6666666950498,115.360786290647"
-              Start="0,0"
-              End="8.6666666950498,107.860786290647">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.6803931453235" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,53.6803931453235"
-                    Point2="0,57.6803931453235"
-                    Point3="4,57.6803931453235" />
-                  <mssgle:LineSegment
-                    End="4.6666666950498,57.6803931453235" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.6666666950498,57.6803931453235"
-                    Point2="8.6666666950498,57.6803931453235"
-                    Point3="8.6666666950498,61.6803931453235" />
-                  <mssgle:LineSegment
-                    End="8.6666666950498,107.860786290647" />
+                    End="0,31.7888900233249" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-87.1686783712251,62.6803931453235,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance1]"
-          TopLeft="304.814289260154,267.88235540786">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,129.694120049394"
-              Start="0,0"
-              End="0,122.194120049394">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,122.194120049394" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.50201171875,55.292372524697,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance2]"
-          TopLeft="478.528579201503,295.658826307112">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,137.164708080919"
-              Start="0,0"
-              End="0,129.664708080919">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,129.664708080919" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.50201171875,59.0276665404595,183.0040234375,11.609375"
+              BoundingBox="-91.50201171875,10.0897575116625,183.0040234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8671,27 +8593,121 @@ UNPIVOT
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance4]"
-          TopLeft="1003.46985665622,369.403926165954">
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance2]"
+          TopLeft="478.528579201503,295.658826307112">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.2888900233249"
+              EndConnector="0,137.164708080919"
               Start="0,0"
-              End="0,31.7888900233249">
+              End="0,129.664708080919">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.7888900233249" />
+                    End="0,129.664708080919" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-91.50201171875,10.0897575116625,183.0040234375,11.609375"
+              BoundingBox="-91.50201171875,59.0276665404595,183.0040234375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance1]"
+          TopLeft="304.814289260154,267.88235540786">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,129.694120049394"
+              Start="0,0"
+              End="0,122.194120049394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,122.194120049394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.50201171875,55.292372524697,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de recherche sans correspondance]"
+          TopLeft="120.285712229962,359.247058383816">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.6666666950498,115.360786290647"
+              Start="0,0"
+              End="8.6666666950498,107.860786290647">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.6803931453235" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.6803931453235"
+                    Point2="0,57.6803931453235"
+                    Point3="4,57.6803931453235" />
+                  <mssgle:LineSegment
+                    End="4.6666666950498,57.6803931453235" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.6666666950498,57.6803931453235"
+                    Point2="8.6666666950498,57.6803931453235"
+                    Point3="8.6666666950498,61.6803931453235" />
+                  <mssgle:LineSegment
+                    End="8.6666666950498,107.860786290647" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-87.1686783712251,62.6803931453235,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche d'injection des données de dimensions.Paths[Sortie de colonne dérivée]"
+          TopLeft="988.571436040256,194.494119320114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.0571431612484,37.4117657354545"
+              Start="0,0"
+              End="9.0571431612484,29.9117657354545">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.7058828677273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.7058828677273"
+                    Point2="0,18.7058828677273"
+                    Point3="4,18.7058828677273" />
+                  <mssgle:LineSegment
+                    End="5.0571431612484,18.7058828677273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.0571431612484,18.7058828677273"
+                    Point2="9.0571431612484,18.7058828677273"
+                    Point3="9.0571431612484,22.7058828677273" />
+                  <mssgle:LineSegment
+                    End="9.0571431612484,29.9117657354545" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8939,42 +8955,6 @@ UNPIVOT
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tâche de construction de la table de faits\Recherche FaitCarburant">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FaitCarburant]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tâche de construction de la table de faits\Destination FaitCarburant">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>projet_edd_analysis_services_salami_rasamy</Database>
+    <Server>DESKTOP-Q6MP172</Server>
+    <ConnectionString>Data Source=DESKTOP-Q6MP172;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>JTfO8JOtMldzV2QbMmlr3Sa6zy4=31/03/2023 22:15:0731/03/2023 22:09:20</TimeStamp>
+        <ID>
+          <String>Db Projet 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>wgCOARPU1UWJBoQ7n6YfqeY8pA0=31/03/2023 22:10:3831/03/2023 22:10:38</TimeStamp>
+        <ID>
+          <String>projet_ssas</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>uTMJPu/6cTsAFfL5iZn0CgQGyPw=31/03/2023 22:11:3431/03/2023 22:11:34</TimeStamp>
+        <ID>
+          <String>Dim Type Carburant</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>kdTjx85NcpBJhkNFsJqGlLTMLOM=31/03/2023 22:11:5031/03/2023 22:11:50</TimeStamp>
+        <ID>
+          <String>Dim Station Service</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>1htIHcJDMNCHoDd27eWTh0pDhRM=31/03/2023 22:12:0431/03/2023 22:12:04</TimeStamp>
+        <ID>
+          <String>Dim Presence</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>NRjBf65RBUlTzSpwjI4A3E+qRbw=31/03/2023 22:12:1931/03/2023 22:12:19</TimeStamp>
+        <ID>
+          <String>Dim Automate24</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>K1DsyW9thBZyfP/PTkp3XaJ0G04=31/03/2023 22:12:3231/03/2023 22:12:32</TimeStamp>
+        <ID>
+          <String>Dim Adresse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>vms0DEn6VH63PfboWtgYFYVg6i8=31/03/2023 22:45:0431/03/2023 22:35:23PZErTvXrl4ZC/b5RrMjagr9yVEQ=31/03/2023 22:35:2331/03/2023 22:35:23</TimeStamp>
+        <ID>
+          <String>cube_ssas_salami_rasamy</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>zJqwj3lZ3nd1u4O1sMsZv7+iaG4=31/03/2023 22:46:1731/03/2023 22:46:17BR7W8Du/nfg9nPoLayGzbB7TYdc=31/03/2023 22:46:1731/03/2023 22:46:17</TimeStamp>
+        <ID>
+          <String>cube_moyenne_prix_salami_rasamy</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>kufQTVuCB43aX034lvJT8h4M0IU=31/03/2023 16:12:4431/03/2023 16:12:44</TimeStamp>
+      <ID>
+        <String>projet_edd_analysis_services_salami_rasamy</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2023-03-31T20:46:24.44Z</LastDeployed>
+</DeploymentSnapshot>

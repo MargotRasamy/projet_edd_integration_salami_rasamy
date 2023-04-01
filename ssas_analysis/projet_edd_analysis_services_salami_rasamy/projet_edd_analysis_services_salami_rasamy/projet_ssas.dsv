@@ -1,0 +1,209 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="15a9f7ca-ceae-401d-b7fc-61880400af56" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>projet_ssas</ID>
+  <Name>projet_ssas</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Db Projet 1</DataSourceID>
+  <Schema>
+    <xs:schema id="projet_ssas" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="projet_ssas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="487f6b23-4706-49c7-b5a9-eb2a6ce58ede">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_FaitCarburant" msprop:design-time-name="37414a88-356f-4eb1-bc76-7f1da5c20c14" msprop:DbTableName="FaitCarburant" msprop:FriendlyName="FaitCarburant" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_fait_carburant" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="8f117ea3-f795-4e41-b269-e3489dc8e8d1" msprop:DbColumnName="id_fait_carburant" msprop:FriendlyName="id_fait_carburant" type="xs:int" />
+                  <xs:element name="id_dim_type_carburant" msprop:design-time-name="2ff7c7e6-311e-4d52-a620-59b69de15a18" msprop:DbColumnName="id_dim_type_carburant" msprop:FriendlyName="id_dim_type_carburant" type="xs:int" />
+                  <xs:element name="id_dim_station_service" msprop:design-time-name="1459dc9a-6170-4983-8eaa-ea0054c3eb56" msprop:DbColumnName="id_dim_station_service" msprop:FriendlyName="id_dim_station_service" type="xs:int" />
+                  <xs:element name="id_dim_presence" msprop:design-time-name="8f96c011-5c4e-4682-bc52-8fd0518453b9" msprop:DbColumnName="id_dim_presence" msprop:FriendlyName="id_dim_presence" type="xs:int" />
+                  <xs:element name="id_dim_adresse" msprop:design-time-name="94365119-cf1b-403a-b5b6-5b35fed17690" msprop:DbColumnName="id_dim_adresse" msprop:FriendlyName="id_dim_adresse" type="xs:int" />
+                  <xs:element name="id_dim_automate_24" msprop:design-time-name="4324078d-992f-4293-b4b1-07b977f05662" msprop:DbColumnName="id_dim_automate_24" msprop:FriendlyName="id_dim_automate_24" type="xs:int" />
+                  <xs:element name="prix_valeur" msprop:design-time-name="ab7db310-d2b4-49fe-a251-29829ef35ac5" msprop:DbColumnName="prix_valeur" msprop:FriendlyName="prix_valeur" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimTypeCarburant" msprop:design-time-name="d7516610-fa30-4e89-a266-f9bf95a82863" msprop:DbTableName="DimTypeCarburant" msprop:FriendlyName="DimTypeCarburant" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dim_type_carburant" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="5d864c51-2116-4c72-affe-3475c925a199" msprop:DbColumnName="id_dim_type_carburant" msprop:FriendlyName="id_dim_type_carburant" type="xs:int" />
+                  <xs:element name="nom_carburant" msprop:design-time-name="6c95a8e5-32af-459f-80b0-0a440b77654c" msprop:DbColumnName="nom_carburant" msprop:FriendlyName="nom_carburant">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimStationService" msprop:design-time-name="54907139-0027-4c79-bc86-98587a124e9a" msprop:DbTableName="DimStationService" msprop:FriendlyName="DimStationService" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dim_station_service" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="9a82b170-4c31-426b-a067-d8fa21c66ceb" msprop:DbColumnName="id_dim_station_service" msprop:FriendlyName="id_dim_station_service" type="xs:int" />
+                  <xs:element name="id_fonctionnel_station_service" msprop:design-time-name="3d805183-b4af-4679-96bb-12281d490a89" msprop:DbColumnName="id_fonctionnel_station_service" msprop:FriendlyName="id_fonctionnel_station_service">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nom" msprop:design-time-name="6870a4bb-64ee-4bcb-baf5-bb21345746e9" msprop:DbColumnName="nom" msprop:FriendlyName="nom">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="marque" msprop:design-time-name="03a78943-aa25-4852-ac62-068379f99ec6" msprop:DbColumnName="marque" msprop:FriendlyName="marque">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimPresence" msprop:design-time-name="3ddadc51-2d13-48a4-b54b-45270911db1f" msprop:DbTableName="DimPresence" msprop:FriendlyName="DimPresence" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dim_presence" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="1d499ee4-c0be-4021-b302-ad3e988b4d48" msprop:DbColumnName="id_dim_presence" msprop:FriendlyName="id_dim_presence" type="xs:int" />
+                  <xs:element name="presence" msprop:design-time-name="3c9c026d-e1d5-4f17-b29d-9b3adf3e0ae4" msprop:DbColumnName="presence" msprop:FriendlyName="presence">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimAutomate24" msprop:design-time-name="f741b724-3d23-41cf-9fcc-511796e81074" msprop:DbTableName="DimAutomate24" msprop:FriendlyName="DimAutomate24" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dim_automate_24" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="2f043acc-d99d-44c5-9ec4-40dda3aeb806" msprop:DbColumnName="id_dim_automate_24" msprop:FriendlyName="id_dim_automate_24" type="xs:int" />
+                  <xs:element name="automate_24" msprop:design-time-name="f0d2dd3b-c483-4675-8860-026d8f9c1e19" msprop:DbColumnName="automate_24" msprop:FriendlyName="automate_24">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimAdresse" msprop:design-time-name="07d51251-8c96-4ab1-9cb7-d88471bd1019" msprop:DbTableName="DimAdresse" msprop:FriendlyName="DimAdresse" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dim_adresse" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="4418956d-385c-4918-b496-6f15069e8099" msprop:DbColumnName="id_dim_adresse" msprop:FriendlyName="id_dim_adresse" type="xs:int" />
+                  <xs:element name="adresse" msprop:design-time-name="fdff8103-eeb1-4429-b685-b582e9de1366" msprop:DbColumnName="adresse" msprop:FriendlyName="adresse">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="code_postal" msprop:design-time-name="89430675-a8d3-4a3e-9a0d-bda86873702a" msprop:DbColumnName="code_postal" msprop:FriendlyName="code_postal">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ville" msprop:design-time-name="22af8beb-91c2-4d05-9ef9-6d07bfcfd3c2" msprop:DbColumnName="ville" msprop:FriendlyName="ville">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FaitCarburant" />
+          <xs:field xpath="id_fait_carburant" />
+        </xs:unique>
+        <xs:unique name="dbo_DimTypeCarburant_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimTypeCarburant" />
+          <xs:field xpath="id_dim_type_carburant" />
+        </xs:unique>
+        <xs:unique name="dbo_DimStationService_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimStationService" />
+          <xs:field xpath="id_dim_station_service" />
+        </xs:unique>
+        <xs:unique name="dbo_DimPresence_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimPresence" />
+          <xs:field xpath="id_dim_presence" />
+        </xs:unique>
+        <xs:unique name="dbo_DimAutomate24_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimAutomate24" />
+          <xs:field xpath="id_dim_automate_24" />
+        </xs:unique>
+        <xs:unique name="dbo_DimAdresse_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimAdresse" />
+          <xs:field xpath="id_dim_adresse" />
+        </xs:unique>
+        <xs:keyref name="FK_FaitCarburant_DimPresence" refer="dbo_DimPresence_Constraint1">
+          <xs:selector xpath=".//dbo_FaitCarburant" />
+          <xs:field xpath="id_dim_presence" />
+        </xs:keyref>
+        <xs:keyref name="FK_FaitCarburant_DimTypeCarburant" refer="dbo_DimTypeCarburant_Constraint1">
+          <xs:selector xpath=".//dbo_FaitCarburant" />
+          <xs:field xpath="id_dim_type_carburant" />
+        </xs:keyref>
+        <xs:keyref name="FK_FaitCarburant_DimAutomate24" refer="dbo_DimAutomate24_Constraint1">
+          <xs:selector xpath=".//dbo_FaitCarburant" />
+          <xs:field xpath="id_dim_automate_24" />
+        </xs:keyref>
+        <xs:keyref name="FK_FaitCarburant_DimStationService" refer="dbo_DimStationService_Constraint1">
+          <xs:selector xpath=".//dbo_FaitCarburant" />
+          <xs:field xpath="id_dim_station_service" />
+        </xs:keyref>
+        <xs:keyref name="FK_FaitCarburant_DimAdresse" refer="dbo_DimAdresse_Constraint1">
+          <xs:selector xpath=".//dbo_FaitCarburant" />
+          <xs:field xpath="id_dim_adresse" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <projet_ssas xmlns="" />
+  </Schema>
+</DataSourceView>
